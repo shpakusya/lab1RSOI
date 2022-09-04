@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1a</title>
+    <style>
+         table{
+            border: 2px solid black;
+            margin-left: auto;
+            margin-right: auto;
+            width: 800px;
+            height: 400px;
+            background-color: gainsboro;
+         }    
+         th, td{
+            border: 2px solid black;
+         }   
+         th{
+            background-color: grey;
+            text-align: center;
+         }
+         td{
+            text-align: left;
+         }
+         .list2{
+            list-style: none;
+         }
+         .list2 li::before{
+            content: '- ';
+         }
+         .brackets-list{
+            list-style-type: none;
+            counter-reset: item;
+         }
+         .brackets-list li::before{
+            content: counter(item) ') ';
+            counter-increment: item;
+         }
+         .letters-brackets-list{
+            list-style: none;
+         }
+         .letters-brackets-list  li:nth-child(1)::before{content: 'a) '}
+         .letters-brackets-list  li:nth-child(2)::before{content: 'b) '}
+         h1{
+            color: aquamarine;
+         }
+         h2{
+            color: blue;
+         }
+         h3{
+            color: bisque;
+         }
+         .t1{
+            font-style: italic;
+            text-decoration: underline;
+         }
+         .t2{
+            font-weight: bold;
+            font-size: 20px;
+         }
+         .t3{
+            font-size: x-large;
+            color: blueviolet;
+            font-stretch: expanded;
+         }
+         .t4{
+            font-stretch: condensed;
+            color: rgb(70, 86, 97);
+         }
+         .t5{
+            font-family: Impact, fantasy;
+         }
+         .inline{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+         }
+    </style>
+</head>
+<body>
+    <table name="table1" cellspacing="1" cellpadding="10">
+        <tr>
+            <th colspan="4"><h1>Head 1</h1></th>
+            <td rowspan="4"><img alt="pic1" width="50px" height="50px" src="./mythicCardBackground.png"></td>
+            <th><h3>Head 3</h3></th>
+            <td rowspan="4">
+                <div class="inline">
+                   США
+                    <ul class="list2">
+                        <li>Нью-Йорк</li>
+                        <li>Лос-Анджелес</li>
+                    </ul>
+                    <img alt="pic3" width="50px" height="50px" src="./mythicCardBackground.png"> 
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td><p class="t1">text1</p></td>
+            <td>
+                Крупнейшие города различных стран:
+                <ol class="list1">
+                    <li>Россия
+                        <ol>
+                            <li>Москва</li>
+                            <li>Санкт-Петербург</li>
+                            <li>Новосибирск</li>
+                        </ol>
+                    </li>
+                    <li>США
+                        <ol>
+                            <li>Нью-Йорк</li>
+                            <li>Лос-Анджелес</li>
+                        </ol>
+                    </li>
+                </ol>
+            </td>
+            <td rowspan="3"><img alt="pic2" width="50px" height="50px" src="./mythicCardBackground.png"></td>
+            <td><p class="t4">text4</p></td>
+            <th><h2>head2</h2></th>
+        </tr>
+        <tr>
+            <td colspan="2" rowspan="2"><p class="t3">text3</p></td>
+            <td><p class="t5">text5</p></td>
+            <td>
+                Меню:
+                <ol type="I">
+                    <li><ins>Завтрак</ins>
+                        <ol type="A">
+                            <li><b>Первый стол</b>
+                                <ol class="brackets-list">
+                                    <li>Первое блюдо</li>
+                                    <li>Второе блюдо</li>
+                                </ol>
+                            </li>
+                            <li><b>Второй стол</b>
+                                <ol class="letters-brackets-list">
+                                    <li>Первое блюдо</li>
+                                    <li>Второе блюдо</li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>
+                    <li><ins>Обед</ins>
+                        <ol type="A">
+                            <li><b>Первый стол</b>
+                                <ol>
+                                    <li>Первое блюдо</li>
+                                    <li>Второе блюдо</li>
+                                    <li>Третье блюдо</li>
+                                </ol>
+                            </li>
+                            <li><b>Второй стол</b>
+                                <ol style="list-style: none;">
+                                    <li>Первое блюдо</li>
+                                    <li>Второе блюдо</li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td><p class="t6">text6</p></td>
+            <td><p class="t2">text2</p></td>
+        </tr>
+    </table>
+</body>
+</html>
