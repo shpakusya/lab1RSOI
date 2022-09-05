@@ -1,0 +1,88 @@
+body{
+    overflow: hidden;
+}
+
+h3[style="font-size: 250%; font-family: 'Times New Roman';"]{
+    color: red;
+    margin: 0;
+}
+
+/* table{
+    width: 100%;
+    height: 100vh;
+    border: none;
+} */
+
+td{
+    /* position: relative; */
+    width: 50%;
+}
+
+img,
+div[alt="pic3"]{
+    position: absolute;
+    width: 300px;
+    height: 200px;
+}
+
+img[alt="pic1"]{
+    top: 0;
+    left: 0;
+}
+
+img[alt="pic2"]{
+    top: 100px;
+    left: 150px;
+}
+
+div[alt="pic3"]{
+    top: 200px;
+    left: 300px;
+}
+
+.lorem-ipsum{
+    z-index: 10;
+    hyphens: auto;
+}
+
+.text-on-img{
+    position: absolute; 
+    z-index: 10; 
+    padding: 10px;
+}
+
+img[alt='anim']{
+    z-index: 50;
+    position: absolute;
+    top: 50%;
+    opacity: 0%;
+    animation: stone1 5s ease-in-out;
+}
+
+@keyframes stone1{
+    0% {left:0; opacity: 100%; transform: rotate(0deg);}
+    30% {left:90%; opacity: 0%; transform: rotate(360deg);}
+    60% {left:0; opacity: 100%; transform: rotate(0deg);}
+    100% {left:90%; opacity: 0%; transform: rotate(360deg);}
+}
+
+.right-side{
+    background: url('../assets/yhs1.jpg');
+    background-origin: content-box;
+    /* opacity: 50%; */
+}
+
+.textcols {
+	column-width: 33%;
+	column-count: 3;
+	column-gap: 4%;
+    text-shadow: 1px 1px 2px red;
+}
+
+.textcols p {
+	padding: 0;
+	margin: 0 0 15px 0;
+    text-align: justify;
+}
+
+
